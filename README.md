@@ -1,5 +1,5 @@
 ### TITLE 
-A data analysis project [Airbnb listings in New York City] using sql and tableau.
+Analysing New York City Airbnb Listings Trends and Insights using sql and tableau.
 
 ### Table of Content
 - [Project Overview](#project-overview)
@@ -14,21 +14,21 @@ A data analysis project [Airbnb listings in New York City] using sql and tableau
 - [References](#references)
 
 ### Project Overview
-type here
+This project explores the new York City Airbnb open Data dataset to uncover trends in short-term rentals. Using SQL and Tableau, i analysed room type distribution, geographic density, pricing and review trends to provide actionable insights for hosts and travelers.
 
 ### Data Sources
 Type Here
 [Download here](https://www.kaggle.com/datasets/dgomonov/new-york-city-airbnb-open-data)
 
 ### Tools
-- SQL  Extract and Analyse the Data
-- Tableau To present the data and run report
+- SQL  (Data Exploration)
+- Tableau (Visualization)
 
 
 ### Data Cleaning
-1 Data Loading and Inspection
-2 Handling Missing Values
-3. Data Cleaning and Formatting
+Data Loading and Inspection
+   - The data has some null value that does not affect the analysis. I prefer to remove in tableau the null values in order to give a precise or accurate insights.
+
 
 ### Exploratory Data Analysis
 
@@ -36,25 +36,116 @@ EDA Involving Exploring the sales data to answer key questions
 
 ### Data Analysis
 
-Include some interesting code/features you worked with
+1. Getting the whole information of the data
 
-```SQL
+``` SQL
 SELECT * FROM AIRBNB 
- WHERE ROOM > 30
 ```
+2. Checking the total number of listings:
+   
+``` SQL 
+SELECT count(*) as total_listings from airbnb;
+
+``` 
+3. What are the distribution of room types
+   
+``` SQL 
+SELECT room_type, COUNT(*) AS COUNT 
+FROM airbnb
+GROUP BY room_type
+ORDER BY COUNT DESC
+
+```
+4. Average price by neighborhood group by (borough)
+
+``` SQL  
+SELECT neighbourhood_group, ROUND(AVG(price)) AS AVG_PRICE
+FROM airbnb
+GROUP BY neighbourhood_group
+ORDER BY AVG_PRICE DESC
+
+```
+5. Most expensive listings
+   
+``` SQL 
+SELECT name, neighboorhood, price
+FROM airbnb
+ORDER BY price DESC
+LIMIT 10
+
+```
+
+6. Average time availability by neighboorhood group
+
+``` SQL 
+SELECT neightboorhood_group , ROUND(AVG(availablity_365)) as AVG_AVAILABILITY
+FROM airbnb
+GROUP BY neightbourhood_group
+ORDER BY AVG_AVAILABILITY DESC
+
+```
+7. Listings with the lowest availability
+
+```  SQL
+SELECT name, neighbourhood_group, availablity_365
+FROM airbnb
+WHERE availability_365 < 30
+ORDER BY availability_365 ASC
+
+```
+8. Top hosts with the most listings
+   
+``` SQL
+SELECT host_id, COUNT(*) as NUM_LISTING
+FROM airbnb
+GROUP BY  host_id
+ORDER BY num_Listing DESC
+LIMIT 10
+
+``` 
+9. Average price by host
+    
+``` SQL 
+SELECT host_id, ROUND(AVG(price)) AS Avg_Host_Price
+from airbnb
+GROUP BY host_id
+ORDER BY Avg_Host_Price
+LIMIT 10
+
+```
+
+10. Listings with the most reviews
+
+``` SQL
+SELECT name, neighboorhood, number_of_reviews
+FROM airbnb
+ORDER BY number_of_reviews DESC
+LIMIT 10
+
+```
+
+11. Average reviews per month by neighborhood group
+
+``` SQL 
+SELECT neighbourhood_group, ROUND(AVG(reviews_per_month)) as Avg_Review_By_Month
+FROM airbnb
+GROUP BY neighbourhood_group
+ORDER BY Avg_Review_By_Month DESC
+
+```
+
 
 ### Findings
 
-The Analysis summary or the insights
+- There are 58 listings in this dataset.
 
 ### Recommendation
 
- Give the recommendation
 
  ### Limitations
-
- Everything that can affect the data analysis eg: removing null values or non needed data
+ 
+The present data give us just a portion of the whole listing in the Airbnb database, however that does not hinder us doing a great analysis to find insights.
 
  ### References
 
- Books used or websites or stackoverflow 
+ [kaggle](https://www.kaggle.com/)
