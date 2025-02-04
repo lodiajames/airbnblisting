@@ -137,15 +137,35 @@ ORDER BY Avg_Review_By_Month DESC
 
 ### Findings
 
-- There are 58 listings in this dataset.
+ 1. **Room Type Distributions**
+  -Analysed the distributions of room types (Entire Home/Apartment, Private Room, Shared Room) across NYC neighborhoods.
+  - Found that **Entire Home/Apartement** listings dominate the market
+- **Private Rooms** are more common in residential neighborhoods, offering budget-friendly options for travelers.
+  
+2. **Geographic Density**
+   - Visualized the geographic distribution of Airbnb listings using Tableau.
+   - Identified hotspots in Manhattan, Brooklyn, and Queens, with **Manhattan** having the highest concentration of listings.
+     
+3. **Pricing Trends**
+   - Investigated pricing trends across neighborhoods and room types.
+   - Discovered that **Manhattan** has the highest average nightly rates, while **Bronx** offers more affordable options.
 
-### Recommendation
+### Tableau Dashboard
+[Link to Tableau Dashboard]() 
+
+### Tableau Dashboard
+[Link to GitHub Repository]() 
+
 
 
  ### Limitations
  
-The present data give us just a portion of the whole listing in the Airbnb database, however that does not hinder us doing a great analysis to find insights.
+The present data give is not the most recent upated version of AIRBNB Listing in New York and it might have some differences in term of data precision. But Overall it can gives us a well around analysis and discoveries.
 
  ### References
 
  [kaggle](https://www.kaggle.com/)
+
+
+ #####
+ This project not only enhanced my data analysis and visualization skills but also provided valuable insights into the short-term rental market in NYC. It demonstrates my ability to transform raw data into actionable business intelligence.
