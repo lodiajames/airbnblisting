@@ -151,7 +151,7 @@ ORDER BY Avg_Review_By_Month DESC
    - Discovered that **Manhattan** has the highest average nightly rates, while **Bronx** offers more affordable options.
 
 ### Tableau Dashboard
-[Link to Tableau Dashboard]() 
+[Link to Tableau Dashboard](https://public.tableau.com/views/AIRBNB_17395535036030/AIRBNBDASHBOARD?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link) 
 
 ### Tableau Dashboard
 [Link to GitHub Repository]() 
