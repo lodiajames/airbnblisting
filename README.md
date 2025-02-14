@@ -153,8 +153,8 @@ ORDER BY Avg_Review_By_Month DESC
 ### Tableau Dashboard
 [Link to Tableau Dashboard](https://public.tableau.com/views/AIRBNB_17395535036030/AIRBNBDASHBOARD?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link) 
 
-### Tableau Dashboard
-[Link to GitHub Repository]() 
+### Github Link
+[Link to GitHub Repository](https://github.com/lodiajames/airbnblisting.git) 
 
 
 
